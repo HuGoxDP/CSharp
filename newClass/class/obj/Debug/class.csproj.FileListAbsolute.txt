@@ -1,0 +1,7 @@
+C:\Users\Алеся\source\newClass\class\bin\Debug\@class.exe.config
+C:\Users\Алеся\source\newClass\class\bin\Debug\@class.exe
+C:\Users\Алеся\source\newClass\class\bin\Debug\@class.pdb
+C:\Users\Алеся\source\newClass\class\obj\Debug\class.csproj.AssemblyReference.cache
+C:\Users\Алеся\source\newClass\class\obj\Debug\class.csproj.CoreCompileInputs.cache
+C:\Users\Алеся\source\newClass\class\obj\Debug\@class.exe
+C:\Users\Алеся\source\newClass\class\obj\Debug\@class.pdb
