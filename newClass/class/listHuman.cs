@@ -6,50 +6,52 @@ using System.Threading.Tasks;
 
 namespace @class
 {
-    class listHuman
+    class ListHuman
     {
-        private List<Human> listHumans;
-        
-        public listHuman()
+        private readonly List<Human> listHumans;
+
+        public ListHuman()
         {
             listHumans = new List<Human>();
         }
-        public void add(Human human)
+        public void Add(Human human)
         {
             listHumans.Add(human);
         }
-        public void show()
+        public void Show()
         {
-            for (int n = 0; n < listHumans.Count(); n++)
-                listHumans[n].printInfo();
+            for (int n = 0; n < listHumans.Count; n++)
+                listHumans[n].PrintInfo();
         }
-        public string show(int a)
+        public string Show(int a)
         {
             string data = "";
-            for(int n = 0; n < listHumans.Count(); n++)
-                data += listHumans[n].toStr();
+            for(int n = 0; n < listHumans.Count; n++)
+                data += listHumans[n].ToStr;
             return data;
         }
-        public void findCountry_Nation(string str)
+        public void FindCountry_Nation(string str)
         {
-            for (int n = 0; n < listHumans.Count(); n++)
-                if (listHumans[n].Adress.Country == str && 
+            for (int n = 0; n < listHumans.Count; n++)
+			{
+				if (listHumans[n].Adress.Country == str &&
                     listHumans[n].Nation.ToString() == "Ukranian")
-                    listHumans[n].printInfo();
-        }
-        public void findName(string str)
+				{
+					listHumans[n].PrintInfo();
+				}
+			}
+		}
+        public void FindName(string str)
         {
-            for (int n = 0; n < listHumans.Count(); n++)
+            for (int n = 0; n < listHumans.Count; n++)
             {
                 if (listHumans[n].Name == str)
-                    listHumans[n].printInfo();
+                    listHumans[n].PrintInfo();
             }
-
         }
         public void Age_weight_height_sort(int choise)
         {
-            
-            int length_humans = listHumans.Count();
+            int length_humans = listHumans.Count;
 		double[] age_weight_height = new double[length_humans];
             int[] count_hum = new int[length_humans];
             for(int n = 0; n < length_humans; n++)
@@ -58,26 +60,21 @@ namespace @class
             if (choise == 1){age_weight_height[n] = listHumans[n].Age;}
             else if(choise == 2){age_weight_height[n] = listHumans[n].Weight;}
             else if(choise == 3){age_weight_height[n] = listHumans[n].Height;}
-                
             }
 		    int j = length_humans - 1;
 		    for (int b = 0; b < j; b++) {
 			    for (int i = j; i != 0; i--) {
 				    if (age_weight_height[i] < age_weight_height[i - 1]) {
-					    double temp = age_weight_height[i];
-					    age_weight_height[i] = age_weight_height[i - 1];
-					    age_weight_height[i - 1] = temp;
-                        int temp_count = count_hum[i];
-					    count_hum[i] = count_hum[i - 1];
-					    count_hum[i - 1] = temp_count;
-				     }
-			    }
+						(age_weight_height[i - 1], age_weight_height[i]) = (age_weight_height[i], age_weight_height[i - 1]);
+						(count_hum[i - 1], count_hum[i]) = (count_hum[i], count_hum[i - 1]);
+					}
+				}
 		    }
-            if (listHumans.Count() != 0) {
+            if (listHumans.Count != 0) {
                Console.WriteLine("Список отсортирован");
-               for(int k = listHumans.Count()-1 ; k >= 0; k--)
+               for(int k = listHumans.Count-1 ; k >= 0; k--)
                 {
-                    listHumans[count_hum[k]].printInfo();
+                    listHumans[count_hum[k]].PrintInfo();
                 }
             }
             else
@@ -85,25 +82,24 @@ namespace @class
                 Console.WriteLine("Список пустой");
             }
         }
-        public void average_age()
+        public void Average_age()
         {
             int age = 0;
-            for (int n = 0; n < listHumans.Count(); n++)
+            for (int n = 0; n < listHumans.Count; n++)
                 age += listHumans[n].Age;
-            if (listHumans.Count() != 0) {
-                float result = age / listHumans.Count();
+            if (listHumans.Count != 0) {
+                float result = age / listHumans.Count;
                 Console.WriteLine(result);
             }
             else
             {
                 Console.WriteLine("Список пустой");
             }
-
         }
-        public void show(bool b)
+        public void Show(bool b)
         {
             foreach (Human obj in listHumans)
-                obj.printInfo();
+                obj.PrintInfo();
         }
     }
 }

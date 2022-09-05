@@ -6,43 +6,56 @@ using System.Threading.Tasks;
 
 namespace @class
 {
-    
-  
-    class Program
-    {   
+    static class Program
+    {
         static void Main(string[] args)
         {
-            List<Human> listHuman = new List<Human>();
-            Adress add1 = new Adress("Ukraine", "Kherson", "Perekopskaya", 3);
-            Human one = new Human("Alesia", "Tantsiurenko", 18, 1.84, 60, false, Nation.Ukranian, add1);
+			if (args is null)
+			{
+				throw new ArgumentNullException(nameof(args));
+			}
+
+			_ = new List<Human>();
+			Adress add1 = new Adress("Ukraine", "Kherson", "ilicha", 91);
+            Human one = new Human("Oleksandr", "Maidanika", 18, 1.69, 70, false, Nation.Ukranian, add1);
             Human two = new Human("Alex", "Ker", 19, 1.84, 100, true, Nation.Polish, new Adress("Polish", "Jahj", "Thgg", 5));
             Human three = new Human("Antony", "admant", 17, 1.86, 89, false, Nation.French, new Adress("French", "Oves", "Almat", 1));
             Human four = new Human("Kiril", "Scroll", 23, 1.74, 75, true, Nation.Ukranian, new Adress("Ukranian", "Oda", "Thu", 4));
 
-            listHuman list = new listHuman();
-            list.add(one);
-            list.add(two);
-            list.add(three);
-            list.add(four);
+            ListHuman list = new ListHuman();
+            list.Add(one);
+            list.Add(two);
+            list.Add(three);
+            list.Add(four);
+			_ = new List<Student>();
+			Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true, Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500);
+            Student st_two = new Student("Rita", "Ora", 21, 1.65, 56, true, Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400);
+
+            _ = new List<Teacher>();
+			Teacher th_one = new Teacher("Rise", "Dora", 26, 1.85, 79, true, Nation.French, new Adress("Frenche", "Paris", "Sturgia", 2), 16000, "FKNFM");
+			th_one.Add(st_one);
+			th_one.Add(st_two);
+			th_one.Show();
+
             Console.WriteLine("Выберите действие ");
             Console.WriteLine("1 - распечатать все объекты");
             Console.WriteLine("2 - найти объект по имени");
-            Console.WriteLine("3 - сортировка");
+            Console.WriteLine("3 - средний возраст");
             Console.WriteLine("4 - сортировка по ...");
-            Console.WriteLine("5 - удалить объект");
+            Console.WriteLine("5 - создать новый объект и добавить в список");
             int i = int.Parse(Console.ReadLine());
             switch (i)
             {
                 case 1:
-                    list.show();
+                    list.Show();
                     break;
                 case 2:
                     Console.WriteLine("Введите имя ");
                     string name = Console.ReadLine();
-                    list.findName(name);
+                    list.FindName(name);
                     break;
                 case 3:
-                    list.average_age();
+                    list.Average_age();
                     break;
                 case 4:
                     Console.WriteLine(" 1 - Возраст \n 2 - вес \n 3 - рост");
@@ -59,16 +72,20 @@ namespace @class
                             break;
                         default:
                             Console.WriteLine("Вы ввели неверный номер!");
-                            break;
+                        break;
                         }
 
                     break;
+                    case 5:
+                        Human.InputInfo(list);
+                        Console.WriteLine("Теперь наш список выглядит так: ");
+                        list.Show();
+                        break;
                 default:
                     Console.WriteLine("Вы ввели неверный номер!");
                     break;
-
             }
             Console.ReadLine();
         }
-    }
+	}
 }

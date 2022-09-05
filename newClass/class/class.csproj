@@ -47,7 +47,9 @@
     <Compile Include="Human.cs" />
     <Compile Include="listHuman.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="ListTeacher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
