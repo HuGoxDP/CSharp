@@ -43,6 +43,7 @@ namespace @class
             Console.WriteLine("3 - средний возраст");
             Console.WriteLine("4 - сортировка по ...");
             Console.WriteLine("5 - создать новый объект и добавить в список");
+
             int i = int.Parse(Console.ReadLine());
             switch (i)
             {
