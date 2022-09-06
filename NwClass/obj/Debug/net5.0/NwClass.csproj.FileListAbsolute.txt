@@ -1,0 +1,16 @@
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.csproj.AssemblyReference.cache
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.AssemblyInfoInputs.cache
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.AssemblyInfo.cs
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.csproj.CoreCompileInputs.cache
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.exe
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.deps.json
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.runtimeconfig.json
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.runtimeconfig.dev.json
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.dll
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\ref\NwClass.dll
+E:\Github_rep\CSharp\NwClass\bin\Debug\net5.0\NwClass.pdb
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.dll
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\ref\NwClass.dll
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.pdb
+E:\Github_rep\CSharp\NwClass\obj\Debug\net5.0\NwClass.genruntimeconfig.cache
