@@ -83,19 +83,17 @@ namespace NwClass
             Human n = new Human(name, surname, age, height, weight, habbits, nation, adr.Inputadress());
             list.Add(n);
         }
-        public string ToStr
+        public virtual string ToStr()
         {
-            get
-            {
-                string str = "Name: " + this.Name + "\n" +
-                        "Surname: " + this.Surname + "\n" +
-                        "Age: " + this.Age.ToString() + "\n" +
-                        "Height: " + this.Height.ToString() + "\n" +
-                        "Weight: " + this.Weight.ToString() + "\n" +
-                        "Is Habbits: " + this.Habbits.ToString() + "\n" +
-                        "Nation: " + this.Nation.ToString() + "\n";
+            string str = "Name: " + this.Name + "\n" +
+                    "Surname: " + this.Surname + "\n" +
+                    "Age: " + this.Age.ToString() + "\n" +
+                    "Height: " + this.Height.ToString() + "\n" +
+                    "Weight: " + this.Weight.ToString() + "\n" +
+                    "Is Habbits: " + this.Habbits.ToString() + "\n" +
+                    "Nation: " + this.Nation.ToString() + "\n" +
+                     "Adress: " + this.Adress.ToString() + "\n";
                 return str;
-            }
         }
         public string Name { get; set; }
 
@@ -112,6 +110,5 @@ namespace NwClass
         public Nation Nation { get; set; }
 
         public Adress Adress { get; set; }
-
     }
 }

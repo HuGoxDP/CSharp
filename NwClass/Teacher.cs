@@ -43,6 +43,16 @@ namespace NwClass
 							 "Money: " + this.Department;
 			Console.WriteLine(data);
 		}
+
+		public override string  ToStr()
+		{
+			string str = base.ToStr();
+			str +=
+						"Salary: " + this.Salary.ToString() + "\n" +
+						"Money: " + this.Department;
+			return str;
+		}
+
 		public int Salary { get; set; }
 		public string Department { get; set; }
 		public List<Student> List { get; set; }

@@ -30,7 +30,7 @@ namespace NwClass
                 "Country: " + this.Country + "\n" +
                 "City: " + this.City + "\n" +
                 "Street: " + this.Street + "\n" +
-                "House: " + this.House.ToString() + "\n";
+                "House: " + this.House.ToString();
         }
         public Adress Inputadress()
         {
@@ -42,8 +42,7 @@ namespace NwClass
             string street = Console.ReadLine();
             Console.WriteLine("House: ");
             int house = int.Parse(Console.ReadLine());
-            Adress adress = new Adress(country, city, street, house);
-            return adress;
+            return new Adress(country, city, street, house);
         }
 
         public string Country { get; set; }

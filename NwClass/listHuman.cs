@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace NwClass
 {
@@ -23,13 +24,13 @@ namespace NwClass
             for (int n = 0; n < listHumans.Count; n++)
                 listHumans[n].PrintInfo();
         }
-        public string Show(int a)
-        {
-            string data = "";
-            for (int n = 0; n < listHumans.Count; n++)
-                data += listHumans[n].ToStr;
-            return data;
-        }
+		public string Show(int a)
+		{
+			string data = "";
+			for (int n = 0; n < listHumans.Count(); n++)
+				data += listHumans[n].ToStr();
+			return data;
+		}
         public void FindCountry_Nation(string str)
         {
             for (int n = 0; n < listHumans.Count; n++)
@@ -106,5 +107,24 @@ namespace NwClass
             foreach (Human obj in listHumans)
                 obj.PrintInfo();
         }
+        public string T_Txt()
+        {
+            string res = "";
+            for (int n = 0; n < listHumans.Count; n++)
+            {
+                res += listHumans[n].ToStr();
+                res += "\n";
+            }
+
+            return res;
+        }
+        public void TextsWriter(string url)
+        {
+            StreamWriter sw = new StreamWriter(url);
+            sw.WriteLine(T_Txt());
+            sw.Close();
+        }
+
+
     }
 }

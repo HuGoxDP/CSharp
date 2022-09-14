@@ -20,7 +20,6 @@ namespace NwClass
         }
         public int Group { get; set; }
         public int Money { get; set; }
-        
 
         public override void PrintInfo()
         {
@@ -37,5 +36,14 @@ namespace NwClass
              "Money: " + this.money.ToString();
             Console.WriteLine(data);
         }
+        public override string ToStr()
+        {
+            string str = base.ToStr();
+            str +=
+                    "Salary: " + this.group.ToString().ToString() + "\n" +
+                    "Money: " + this.money.ToString();
+            return str;
+        }
+
     }
 }

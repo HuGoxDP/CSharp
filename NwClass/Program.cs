@@ -28,23 +28,20 @@ namespace NwClass
             list.Add(two);
             list.Add(three);
             list.Add(four);
+            list.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Humans.txt");
             Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true, Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500);
             Student st_two = new Student("Rita", "Ora", 21, 1.65, 56, true, Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400);
             ListStudent listStudent = new ListStudent();
             listStudent.Add(st_one);
             listStudent.Add(st_two);
-
-            string fileName = "Students.json";
-            string jsonString = JsonSerializer.Serialize(listStudent);
-            File.WriteAllText(fileName, jsonString);
-
-            Console.WriteLine(jsonString);
+			listStudent.Save_json();
+            listStudent.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Students.txt");
 
             ListTeacher listTeacher = new ListTeacher();
             Teacher th_one = new Teacher("Rise", "Dora", 26, 1.85, 79, true, Nation.French, new Adress("Frenche", "Paris", "Sturgia", 2), 16000, "FKNFM");
             listTeacher.Add(th_one);
-
-
+			listTeacher.Save_json();
+            listTeacher.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Teaters.txt");
 
 /*
             Console.WriteLine("Выберите действие ");
