@@ -34,7 +34,7 @@ namespace NwClass
 		}
 		public void Add(Student student)
 		{
-			if (Check_numofset(student.Key.ToString()))
+			if (Check_NumOfSet(student.Key.ToString()))
 			{
 				List.Add(student);
 			}
@@ -58,17 +58,10 @@ namespace NwClass
 				"Key: " + this.keywords.ToString() + "\n";
 			Console.WriteLine(data);
 		}
-		public bool Check_numofset(string key)
+		public bool Check_NumOfSet(string key)
 		{
 			bool check;
-			if ((List.Count < numofseats) && (key == keywords.ToString()))
-			{
-				check = true;
-			}
-			else
-			{
-				check = false;
-			}
+			check = (List.Count < numofseats) && (key == keywords.ToString());
 			return check;
 		}
 
