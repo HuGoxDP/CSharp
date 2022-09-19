@@ -18,7 +18,6 @@ namespace NwClass
 		private string department;
 		private int numofseats;
 		private KeyWords keywords;
-		private List<Student> List;
 		public Teacher() : base()
 		{
 			List = new List<Student>();
@@ -33,10 +32,12 @@ namespace NwClass
 			this.keywords = keywords;
 			this.List = new List<Student>();
 		}
-		public void add(Student student)
+		public void Add(Student student)
 		{
-			if (check_numofset(student.Key.ToString()))
-				list.Add(student);
+			if (Check_numofset(student.Key.ToString()))
+			{
+				List.Add(student);
+			}
 			else
 			{
 				Console.WriteLine("Мест нет либо интересы не совпадают!");
@@ -50,18 +51,20 @@ namespace NwClass
 		public override void PrintInfo()
 		{
 			string data =
-			   base.ToStr() + "\n" +
+			   base.ToStr() +
 			   "Salary: " + this.salary.ToString() + "\n" +
 			   "Money: " + this.department + "\n" +
 				"Number of set: " + this.numofseats.ToString() + "\n" +
-				"Key: " + this.keywords.ToString();
+				"Key: " + this.keywords.ToString() + "\n";
 			Console.WriteLine(data);
 		}
-		public bool check_numofset(string key)
+		public bool Check_numofset(string key)
 		{
-			bool check = false;
+			bool check;
 			if ((List.Count < numofseats) && (key == keywords.ToString()))
+			{
 				check = true;
+			}
 			else
 			{
 				check = false;
@@ -69,13 +72,14 @@ namespace NwClass
 			return check;
 		}
 
-
 		public override string  ToStr()
 		{
 			string str = base.ToStr();
 			str +=
 						"Salary: " + this.Salary.ToString() + "\n" +
-						"Money: " + this.Department;
+						"Money: " + this.Department + "\n" + 
+						"Number of set: " + this.numofseats.ToString() + "\n" +
+						"Key: " + this.keywords.ToString() ;
 			return str;
 		}
 
@@ -99,10 +103,6 @@ namespace NwClass
 			get { return keywords; }
 			set { keywords = value; }
 		}
-		public List<Student> List
-		{
-			get { return list; }
-			set { list = value; }
-		}
+		public List<Student> List{get; set;}
 	}
 }

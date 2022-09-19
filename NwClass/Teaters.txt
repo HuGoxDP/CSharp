@@ -4,6 +4,7 @@ Age: 26
 Height: 1.85
 Weight: 79
 Is Habbits: True
+Email: Dorira@gmail.com
 Nation: French
 Adress: Country: Frenche
 City: Paris
@@ -11,5 +12,7 @@ Street: Sturgia
 House: 2
 Salary: 16000
 Money: FKNFM
+Number of set: 2
+Key: java
  
 

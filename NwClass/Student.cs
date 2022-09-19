@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace NwClass
 {
     public enum Key { csharp, python, java, JS }
     class Student : Human
     {
-        private readonly int group;
-        private readonly int money;
-        private Key key;
+
+		private int group;
+		private int money;
+		private Key key;
 
         public Student(string name, string surname, int age, double height,
              double weight, bool habbits, string email, Nation nation, Adress adress, int group, int money, Key key) : base(name, surname,
@@ -21,22 +27,30 @@ namespace NwClass
             this.money = money;
             this.key = key;
         }
-        public int Group { get; set; }
-        public int Money { get; set; }
-        public Key Key
-        {
-            get { return key; }
-            set { key = value; }
+        public int Group
+		{
+			get { return group; }
+			set { group = value; }
+		}
+		public int Money
+		{
+			get { return money; }
+			set { money = value; }
+		}
+		public Key Key
+		{
+			get { return key; }
+			set { key = value; }
 
-        }
+		}
 
         public override void PrintInfo()
         {
             string data =
-              base.ToStr() + "\n" +
+              base.ToStr()  +
               "Group: " + this.group.ToString() + "\n" +
               "Money: " + this.money.ToString() + "\n" +
-               "Key: " + this.key.ToString();
+               "Key: " + this.key.ToString()+ "\n";
             Console.WriteLine(data);
         }
         public override string ToStr()

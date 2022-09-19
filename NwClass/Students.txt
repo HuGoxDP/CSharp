@@ -4,13 +4,15 @@ Age: 20
 Height: 1.75
 Weight: 78
 Is Habbits: True
+Email: rikota@gmail.com
 Nation: French
 Adress: Country: Frenche
 City: Paris
 Street: Brokoli
 House: 3
-Salary: 241
+Group: 241
 Money: 2500
+Key: java
  
 Name: Rita
 Surname: Ora
@@ -18,12 +20,14 @@ Age: 21
 Height: 1.65
 Weight: 56
 Is Habbits: True
+Email: RitOR@gmail.com
 Nation: French
 Adress: Country: Frenche
 City: Paris
 Street: Aserai
 House: 5
-Salary: 241
+Group: 241
 Money: 3400
+Key: java
  
 

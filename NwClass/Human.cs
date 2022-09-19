@@ -109,23 +109,56 @@ namespace NwClass
                      "Adress: " + this._adress.ToString() + "\n";
                 return str;
         }
-        public string Name { get; set; }
+public string Name
+		{
+			get { return _name; }
+			set { _name = value; }
+		}
 
-        public string Surname { get; set; }
+		public string Surname
+		{
+			get { return _surname; }
+			set { _surname = value; }
+		}
 
-        public int Age { get; set; }
+		public int Age
+		{
+			get { return _age; }
+			set { _age = value; }
+		}
 
-        public string Email { get; set; }
+		public double Height
+		{
+			get { return _height; }
+			set { _height = value; }
+		}
 
+		public double Weight
+		{
+			get { return _weight; }
+			set { _weight = value; }
+		}
 
-        public double Height { get; set; }
+		public bool Habbits
+		{
+			get { return _habbits; }
+			set { _habbits = value; }
+		}
+		public string Email
+		{
+			get { return _email; }
+			set { _email = value; }
+		}
+		public Nation Nation
+		{
+			get { return _nation; }
+			set { _nation = value; }
+		}
 
-        public double Weight { get; set; }
-
-        public bool Habbits { get; set; }
-
-        public Nation Nation { get; set; }
-
-        public Adress Adress { get; set; }
-    }
+		public Adress Adress
+		{
+			get { return _adress; }
+			set { _adress = value; }
+		}
+	}
 }

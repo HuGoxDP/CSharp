@@ -4,6 +4,7 @@ Age: 18
 Height: 1.69
 Weight: 70
 Is Habbits: False
+Email: erflowE@gmail.com
 Nation: Ukranian
 Adress: Country: Ukraine
 City: Kherson
@@ -16,6 +17,7 @@ Age: 19
 Height: 1.84
 Weight: 100
 Is Habbits: True
+Email: ealexE@gmail.com
 Nation: Polish
 Adress: Country: Polish
 City: Jahj
@@ -28,6 +30,7 @@ Age: 17
 Height: 1.86
 Weight: 89
 Is Habbits: False
+Email: Antony213@gmail.com
 Nation: French
 Adress: Country: French
 City: Oves
@@ -40,6 +43,7 @@ Age: 23
 Height: 1.74
 Weight: 75
 Is Habbits: True
+Email: KirScr@gmail.com
 Nation: Ukranian
 Adress: Country: Ukranian
 City: Oda

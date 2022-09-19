@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0L7zJ/AOYQahSCQJHytOt8xVuHUgpUXeLbrWqCr8EuuPSYG15zW5OYUQt915iWLXjhL6nfOAGG6M155OO+VEaw==",
+  "dgSpecHash": "2WdMNgBbrDHSebUKWKsDbmv18J03xVnFwyoc3AJbI6IqkGJoh8YLEQ+Qs7K4pdtARWzYN8qPXQEG/MrS88638w==",
   "success": true,
   "projectFilePath": "E:\\Github_rep\\CSharp\\NwClass\\NwClass.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
