@@ -47,7 +47,7 @@ namespace NwClass
 			listTeacher.Save_json();
             listTeacher.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Teaters.txt");
 
-            /*Console.WriteLine("Выберите действие ");
+            /**Console.WriteLine("Выберите действие ");
             Console.WriteLine("1 - распечатать все объекты");
             Console.WriteLine("2 - найти объект по имени");
             Console.WriteLine("3 - средний возраст");
@@ -104,7 +104,7 @@ namespace NwClass
                 default:
                     Console.WriteLine("Вы ввели неверный номер!");
                     break;
-            }*/
+            }**/
             Console.ReadLine();
         }
     }
