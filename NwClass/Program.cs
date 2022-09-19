@@ -28,6 +28,8 @@ namespace NwClass
             list.Add(two);
             list.Add(three);
             list.Add(four);
+
+
             list.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Humans.txt");
             Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true, Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500);
             Student st_two = new Student("Rita", "Ora", 21, 1.65, 56, true, Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400);
@@ -43,13 +45,14 @@ namespace NwClass
 			listTeacher.Save_json();
             listTeacher.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Teaters.txt");
 
-/*
+
             Console.WriteLine("Выберите действие ");
             Console.WriteLine("1 - распечатать все объекты");
             Console.WriteLine("2 - найти объект по имени");
             Console.WriteLine("3 - средний возраст");
             Console.WriteLine("4 - сортировка по ...");
             Console.WriteLine("5 - создать новый объект и добавить в список");
+            Console.WriteLine("6 - Удалить человека ");
 
             int i = int.Parse(Console.ReadLine());
             switch (i)
@@ -90,10 +93,17 @@ namespace NwClass
                     Console.WriteLine("Теперь наш список выглядит так: ");
                     list.Show();
                     break;
+                case 6:
+                    list.Show();
+                    Console.WriteLine("\nУ Вас " + list.Counts() + " человек(а) \n Введите от 1 до " + list.Counts() + "\n");
+                    list.delete(int.Parse(Console.ReadLine()));
+                    list.Show();
+                    break;
+
                 default:
                     Console.WriteLine("Вы ввели неверный номер!");
                     break;
-            }*/
+            }
             Console.ReadLine();
         }
     }

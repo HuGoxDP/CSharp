@@ -30,8 +30,6 @@ namespace NwClass
 			const string fileName = "Teachers.json";
             string jsonString = JsonSerializer.Serialize(this.List);
             File.WriteAllText(fileName, jsonString);
-
-            Console.WriteLine(jsonString);
         }
 
         public string T_Txt()

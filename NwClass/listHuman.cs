@@ -124,7 +124,18 @@ namespace NwClass
             sw.WriteLine(T_Txt());
             sw.Close();
         }
+        public void delete(int i)
+        {         
+                    listHumans.RemoveAt(i-1);
+            }
+        public int Counts()
+        {
+            int counts1 = listHumans.Count;
+            return counts1;
+        }
 
+
+        }
 
     }
-}
+

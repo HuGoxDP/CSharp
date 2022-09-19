@@ -31,7 +31,6 @@ namespace NwClass
             string jsonString = JsonSerializer.Serialize(this.List);
             File.WriteAllText(fileName, jsonString);
 
-            Console.WriteLine(jsonString);
         }
         public string T_Txt()
         {
