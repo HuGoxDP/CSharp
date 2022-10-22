@@ -17,4 +17,10 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\5.0.0.2515\buildTransitive\Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\5.0.0.2515\buildTransitive\Xamarin.Forms.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgUno_UI Condition=" '$(PkgUno_UI)' == '' ">C:\Users\User\.nuget\packages\uno.ui\4.5.12</PkgUno_UI>
+  </PropertyGroup>
 </Project>

@@ -18,10 +18,10 @@ namespace NwClass
         {
 
             Adress add1 = new Adress("Ukraine", "Kherson", "ilicha", 91);
-            Human one = new Human("Oleksandr", "Maidanika", 18, 1.69, 70, false,"erflowE@gmail.com", Nation.Ukranian, add1);
-            Human two = new Human("Alex", "Ker", 19, 1.84, 100, true,"ealexE@gmail.com", Nation.Polish, new Adress("Polish", "Jahj", "Thgg", 5));
-            Human three = new Human("Antony", "admant", 17, 1.86, 89, false,"Antony213@gmail.com", Nation.French, new Adress("French", "Oves", "Almat", 1));
-            Human four = new Human("Kiril", "Scroll", 23, 1.74, 75, true,"KirScr@gmail.com", Nation.Ukranian, new Adress("Ukranian", "Oda", "Thu", 4));
+            Human one = new Human("Oleksandr", "Maidanika",Gender.Male, 18, 1.69, 70, false,"erflowE@gmail.com", Nation.Ukranian, add1);
+            Human two = new Human("Alex", "Ker", Gender.Male, 19, 1.84, 100, true,"ealexE@gmail.com", Nation.Polish, new Adress("Polish", "Jahj", "Thgg", 5));
+            Human three = new Human("Antony", "admant", Gender.Male, 17, 1.86, 89, false,"Antony213@gmail.com", Nation.French, new Adress("French", "Oves", "Almat", 1));
+            Human four = new Human("Kiril", "Scroll", Gender.Male, 23, 1.74, 75, true,"KirScr@gmail.com", Nation.Ukranian, new Adress("Ukranian", "Oda", "Thu", 4));
 
             ListHuman list = new ListHuman();
             list.Add(one);
@@ -30,7 +30,7 @@ namespace NwClass
             list.Add(four);
 
             list.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Humans.txt");
-            Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true,"rikota@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500, Key.java);
+            Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true,"rikota@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500, Key.csharp);
             Student st_two = new Student("Rita", "Ora", 21, 1.65, 56, true,"RitOR@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400, Key.java);
             ListStudent listStudent = new ListStudent();
             listStudent.Add(st_one);
@@ -105,7 +105,6 @@ namespace NwClass
                     Console.WriteLine("Вы ввели неверный номер!");
                     break;
             }**/
-            Console.ReadLine();
         }
     }
 }

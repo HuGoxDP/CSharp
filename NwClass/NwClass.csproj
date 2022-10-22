@@ -5,4 +5,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Uno.UI" Version="4.5.12" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Windows\Storage\" />
+  </ItemGroup>
+
 </Project>

@@ -45,6 +45,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[4.5.12, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2515, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -3,4 +3,9 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\5.0.0.2515\buildTransitive\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\5.0.0.2515\buildTransitive\Xamarin.Forms.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.sourcegenerationtasks\4.1.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets" Condition="Exists('$(NuGetPackageRoot)uno.sourcegenerationtasks\4.1.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" />
+    <Import Project="$(NuGetPackageRoot)uno.ui\4.5.12\buildTransitive\netstandard2.0\Uno.UI.targets" Condition="Exists('$(NuGetPackageRoot)uno.ui\4.5.12\buildTransitive\netstandard2.0\Uno.UI.targets')" />
+  </ImportGroup>
 </Project>

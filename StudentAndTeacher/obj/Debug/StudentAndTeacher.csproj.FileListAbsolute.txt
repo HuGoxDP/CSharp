@@ -1,0 +1,10 @@
+E:\Github_rep\CSharp\StudentAndTeacher\bin\Debug\StudentAndTeacher.exe.config
+E:\Github_rep\CSharp\StudentAndTeacher\bin\Debug\StudentAndTeacher.exe
+E:\Github_rep\CSharp\StudentAndTeacher\bin\Debug\StudentAndTeacher.pdb
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.csproj.AssemblyReference.cache
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.Properties.Resources.resources
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.csproj.GenerateResource.cache
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.csproj.CoreCompileInputs.cache
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.exe
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.pdb
+E:\Github_rep\CSharp\StudentAndTeacher\obj\Debug\StudentAndTeacher.PersonRegistration.resources

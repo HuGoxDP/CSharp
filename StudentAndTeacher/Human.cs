@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NwClass
+namespace StudentAndTeacher
 {
     enum Nation { Ukranian, French, Polish };
     enum Gender { Male, Female };
@@ -32,7 +32,7 @@ namespace NwClass
             this._habbits = false;
             this._nation = Nation.Ukranian;
         }
-        public Human(string name, string surname, Gender gender , int age, double height, double weight, bool habbits, string email, Nation nation, Adress adress)
+        public Human(string name, string surname, Gender gender, int age, double height, double weight, bool habbits, string email, Nation nation, Adress adress)
         {
             this._name = name;
             this._surname = surname;
@@ -64,6 +64,7 @@ namespace NwClass
             bool result = one._age < two._age;
             return result;
         }
+
         public virtual void PrintInfo()
         {
             string data =
@@ -100,7 +101,7 @@ namespace NwClass
             Console.WriteLine("Nation: ");
             Nation nation = (Nation)Enum.Parse(typeof(Nation), Console.ReadLine(), true);
             Adress adr = new Adress();
-            Human n = new Human(name, surname, gender, age, height, weight,  habbits, email, nation, adr.Inputadress());
+            Human n = new Human(name, surname, gender, age, height, weight, habbits, email, nation, adr.Inputadress());
             list.Add(n);
         }
         public virtual string ToStr()
@@ -115,19 +116,19 @@ namespace NwClass
                     "Email: " + this._email + "\n" +
                     "Nation: " + this._nation.ToString() + "\n" +
                      "Adress: " + this._adress.ToString() + "\n";
-                return str;
+            return str;
         }
-public string Name
-		{
-			get { return _name; }
-			set { _name = value; }
-		}
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
 
-		public string Surname
-		{
-			get { return _surname; }
-			set { _surname = value; }
-		}
+        public string Surname
+        {
+            get { return _surname; }
+            set { _surname = value; }
+        }
         public Gender Gender
         {
             get { return _gender; }
@@ -135,43 +136,43 @@ public string Name
         }
 
         public int Age
-		{
-			get { return _age; }
-			set { _age = value; }
-		}
+        {
+            get { return _age; }
+            set { _age = value; }
+        }
 
-		public double Height
-		{
-			get { return _height; }
-			set { _height = value; }
-		}
+        public double Height
+        {
+            get { return _height; }
+            set { _height = value; }
+        }
 
-		public double Weight
-		{
-			get { return _weight; }
-			set { _weight = value; }
-		}
+        public double Weight
+        {
+            get { return _weight; }
+            set { _weight = value; }
+        }
 
-		public bool Habbits
-		{
-			get { return _habbits; }
-			set { _habbits = value; }
-		}
-		public string Email
-		{
-			get { return _email; }
-			set { _email = value; }
-		}
-		public Nation Nation
-		{
-			get { return _nation; }
-			set { _nation = value; }
-		}
+        public bool Habbits
+        {
+            get { return _habbits; }
+            set { _habbits = value; }
+        }
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+        public Nation Nation
+        {
+            get { return _nation; }
+            set { _nation = value; }
+        }
 
-		public Adress Adress
-		{
-			get { return _adress; }
-			set { _adress = value; }
-		}
-	}
+        public Adress Adress
+        {
+            get { return _adress; }
+            set { _adress = value; }
+        }
+    }
 }

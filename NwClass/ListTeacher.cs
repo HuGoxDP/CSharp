@@ -5,6 +5,9 @@ using System.Text;
 using System.Text.Json;
 using System.IO;
 using System.Threading.Tasks;
+ using Xamarin.Forms.PlatformConfiguration;
+using Windows.Storage.Pickers;
+using Windows.Storage;
 
 namespace NwClass
 {
@@ -48,6 +51,22 @@ namespace NwClass
             StreamWriter sw = new StreamWriter(url);
             sw.WriteLine(T_Txt());
             sw.Close();
+        }
+        private async Task UrlSelecterAsync()
+        {
+            var folderPicker = new FolderPicker();
+            folderPicker.SuggestedStartLocation = PickerLocationId.ComputerFolder;
+            folderPicker.FileTypeFilter.Add("*");
+            StorageFolder pickedFolder = await folderPicker.PickSingleFolderAsync();
+            if (pickedFolder != null)
+            {
+                // Folder was picked you can now use it
+                var files = await pickedFolder.GetFilesAsync();
+            }
+            else
+            {
+                // No folder was picked or the dialog was cancelled.
+            }
         }
     }
 }
