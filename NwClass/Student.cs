@@ -19,9 +19,9 @@ namespace NwClass
 		private int money;
 		private Key key;
 
-        public Student(string name, string surname, int age, double height,
+        public Student(string name, string surname, Gender gender, int age, double height,
              double weight, bool habbits, string email, Nation nation, Adress adress, int group, int money, Key key) : base(name, surname,
-                 age, height, weight, habbits, email, nation, adress)
+             gender, age, height, weight, habbits, email, nation, adress)
         {
             this.group = group;
             this.money = money;

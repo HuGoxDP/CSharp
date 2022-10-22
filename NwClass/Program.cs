@@ -30,8 +30,8 @@ namespace NwClass
             list.Add(four);
 
             list.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Humans.txt");
-            Student st_one = new Student("Rick", "Oda", 20, 1.75, 78, true,"rikota@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500, Key.csharp);
-            Student st_two = new Student("Rita", "Ora", 21, 1.65, 56, true,"RitOR@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400, Key.java);
+            Student st_one = new Student("Rick", "Oda", Gender.Male, 20, 1.75, 78, true,"rikota@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Brokoli", 3), 241, 2500, Key.csharp);
+            Student st_two = new Student("Rita", "Ora",Gender.Female, 21, 1.65, 56, true,"RitOR@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Aserai", 5), 241, 3400, Key.java);
             ListStudent listStudent = new ListStudent();
             listStudent.Add(st_one);
             listStudent.Add(st_two);
@@ -39,7 +39,7 @@ namespace NwClass
             listStudent.TextsWriter("E:\\Github_rep\\CSharp\\NwClass\\Students.txt");
 
             ListTeacher listTeacher = new ListTeacher();
-            Teacher th_one = new Teacher("Rise", "Dora", 26, 1.85, 79, true,"Dorira@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Sturgia", 2), 16000, "FKNFM", 2,  KeyWords.java);
+            Teacher th_one = new Teacher("Rise", "Dora",Gender.Female, 26, 1.85, 79, true,"Dorira@gmail.com", Nation.French, new Adress("Frenche", "Paris", "Sturgia", 2), 16000, "FKNFM", 2,  KeyWords.java);
             th_one.Add(st_one);
 			th_one.Add(st_two);
             th_one.Show();

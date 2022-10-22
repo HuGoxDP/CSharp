@@ -22,9 +22,9 @@ namespace NwClass
 		{
 			List = new List<Student>();
 		}
-		public Teacher(string name, string surname, int age, double height,
+		public Teacher(string name, string surname, Gender gender ,int age, double height,
 			double weight, bool habbits, string email, Nation nation, Adress adress, int salary, string department, int numofseats, KeyWords keywords) : base(name, surname,
-				age, height, weight, habbits, email, nation, adress)
+				gender,age, height, weight, habbits, email, nation, adress)
 		{
 			this.salary = salary;
 			this.department = department;
