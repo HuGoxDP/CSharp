@@ -84,7 +84,7 @@ namespace StudentsAndTeachers
             // GenderLabel
             // 
             this.GenderLabel.AutoSize = true;
-            this.GenderLabel.Location = new System.Drawing.Point(115, 239);
+            this.GenderLabel.Location = new System.Drawing.Point(378, 155);
             this.GenderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GenderLabel.Name = "GenderLabel";
             this.GenderLabel.Size = new System.Drawing.Size(45, 15);
@@ -93,7 +93,7 @@ namespace StudentsAndTeachers
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(98, 111);
+            this.NameTextBox.Location = new System.Drawing.Point(19, 111);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(167, 23);
@@ -101,7 +101,7 @@ namespace StudentsAndTeachers
             // 
             // SurnameTextBox
             // 
-            this.SurnameTextBox.Location = new System.Drawing.Point(299, 111);
+            this.SurnameTextBox.Location = new System.Drawing.Point(214, 111);
             this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(167, 23);
@@ -109,7 +109,7 @@ namespace StudentsAndTeachers
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(299, 267);
+            this.EmailTextBox.Location = new System.Drawing.Point(82, 261);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(208, 23);
@@ -118,7 +118,7 @@ namespace StudentsAndTeachers
             // Namelabel
             // 
             this.Namelabel.AutoSize = true;
-            this.Namelabel.Location = new System.Drawing.Point(167, 81);
+            this.Namelabel.Location = new System.Drawing.Point(88, 81);
             this.Namelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Namelabel.Name = "Namelabel";
             this.Namelabel.Size = new System.Drawing.Size(39, 15);
@@ -128,7 +128,7 @@ namespace StudentsAndTeachers
             // SurnameLable
             // 
             this.SurnameLable.AutoSize = true;
-            this.SurnameLable.Location = new System.Drawing.Point(352, 81);
+            this.SurnameLable.Location = new System.Drawing.Point(267, 81);
             this.SurnameLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SurnameLable.Name = "SurnameLable";
             this.SurnameLable.Size = new System.Drawing.Size(54, 15);
@@ -138,7 +138,7 @@ namespace StudentsAndTeachers
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(384, 239);
+            this.EmailLabel.Location = new System.Drawing.Point(167, 233);
             this.EmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(36, 15);
@@ -159,108 +159,7 @@ namespace StudentsAndTeachers
             // AgeComboBox
             // 
             this.AgeComboBox.FormattingEnabled = true;
-            this.AgeComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59",
-            "60",
-            "61",
-            "62",
-            "63",
-            "64",
-            "65",
-            "66",
-            "67",
-            "68",
-            "69",
-            "70",
-            "71",
-            "72",
-            "73",
-            "74",
-            "75",
-            "76",
-            "77",
-            "78",
-            "79",
-            "80",
-            "81",
-            "82",
-            "83",
-            "84",
-            "85",
-            "86",
-            "87",
-            "88",
-            "89",
-            "90",
-            "91",
-            "92",
-            "93",
-            "94",
-            "95",
-            "96",
-            "97",
-            "98",
-            "99",
-            "100"});
-            this.AgeComboBox.Location = new System.Drawing.Point(119, 196);
+            this.AgeComboBox.Location = new System.Drawing.Point(19, 187);
             this.AgeComboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.AgeComboBox.Name = "AgeComboBox";
             this.AgeComboBox.Size = new System.Drawing.Size(60, 23);
@@ -269,7 +168,7 @@ namespace StudentsAndTeachers
             // AgeLabel
             // 
             this.AgeLabel.AutoSize = true;
-            this.AgeLabel.Location = new System.Drawing.Point(131, 167);
+            this.AgeLabel.Location = new System.Drawing.Point(31, 158);
             this.AgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AgeLabel.Name = "AgeLabel";
             this.AgeLabel.Size = new System.Drawing.Size(28, 15);
@@ -278,7 +177,7 @@ namespace StudentsAndTeachers
             // 
             // HeightTextBox
             // 
-            this.HeightTextBox.Location = new System.Drawing.Point(227, 196);
+            this.HeightTextBox.Location = new System.Drawing.Point(114, 187);
             this.HeightTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(87, 23);
@@ -286,7 +185,7 @@ namespace StudentsAndTeachers
             // 
             // WeightTextBox
             // 
-            this.WeightTextBox.Location = new System.Drawing.Point(356, 196);
+            this.WeightTextBox.Location = new System.Drawing.Point(230, 187);
             this.WeightTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(73, 23);
@@ -295,7 +194,7 @@ namespace StudentsAndTeachers
             // HeightLabel
             // 
             this.HeightLabel.AutoSize = true;
-            this.HeightLabel.Location = new System.Drawing.Point(250, 167);
+            this.HeightLabel.Location = new System.Drawing.Point(135, 158);
             this.HeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(43, 15);
@@ -305,7 +204,7 @@ namespace StudentsAndTeachers
             // WeightLabel2
             // 
             this.WeightLabel2.AutoSize = true;
-            this.WeightLabel2.Location = new System.Drawing.Point(372, 167);
+            this.WeightLabel2.Location = new System.Drawing.Point(245, 158);
             this.WeightLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WeightLabel2.Name = "WeightLabel2";
             this.WeightLabel2.Size = new System.Drawing.Size(45, 15);
@@ -315,7 +214,7 @@ namespace StudentsAndTeachers
             // GenderMaleRadioButton
             // 
             this.GenderMaleRadioButton.AutoSize = true;
-            this.GenderMaleRadioButton.Location = new System.Drawing.Point(77, 270);
+            this.GenderMaleRadioButton.Location = new System.Drawing.Point(330, 187);
             this.GenderMaleRadioButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GenderMaleRadioButton.Name = "GenderMaleRadioButton";
             this.GenderMaleRadioButton.Size = new System.Drawing.Size(51, 19);
@@ -327,7 +226,7 @@ namespace StudentsAndTeachers
             // GenderFemaleRadioButton
             // 
             this.GenderFemaleRadioButton.AutoSize = true;
-            this.GenderFemaleRadioButton.Location = new System.Drawing.Point(140, 270);
+            this.GenderFemaleRadioButton.Location = new System.Drawing.Point(399, 187);
             this.GenderFemaleRadioButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GenderFemaleRadioButton.Name = "GenderFemaleRadioButton";
             this.GenderFemaleRadioButton.Size = new System.Drawing.Size(63, 19);
@@ -339,7 +238,7 @@ namespace StudentsAndTeachers
             // HabbitsLabel
             // 
             this.HabbitsLabel.AutoSize = true;
-            this.HabbitsLabel.Location = new System.Drawing.Point(224, 239);
+            this.HabbitsLabel.Location = new System.Drawing.Point(24, 237);
             this.HabbitsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HabbitsLabel.Name = "HabbitsLabel";
             this.HabbitsLabel.Size = new System.Drawing.Size(48, 15);
@@ -349,7 +248,7 @@ namespace StudentsAndTeachers
             // HabbitsCheckBox
             // 
             this.HabbitsCheckBox.AutoSize = true;
-            this.HabbitsCheckBox.Location = new System.Drawing.Point(238, 270);
+            this.HabbitsCheckBox.Location = new System.Drawing.Point(38, 268);
             this.HabbitsCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.HabbitsCheckBox.Name = "HabbitsCheckBox";
             this.HabbitsCheckBox.Size = new System.Drawing.Size(15, 14);
@@ -363,7 +262,7 @@ namespace StudentsAndTeachers
             "Ukranian",
             "French",
             "Polish"});
-            this.NationComboBox.Location = new System.Drawing.Point(19, 329);
+            this.NationComboBox.Location = new System.Drawing.Point(310, 261);
             this.NationComboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NationComboBox.Name = "NationComboBox";
             this.NationComboBox.Size = new System.Drawing.Size(174, 23);
@@ -371,7 +270,7 @@ namespace StudentsAndTeachers
             // 
             // CountryTextBox
             // 
-            this.CountryTextBox.Location = new System.Drawing.Point(211, 329);
+            this.CountryTextBox.Location = new System.Drawing.Point(10, 319);
             this.CountryTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CountryTextBox.Name = "CountryTextBox";
             this.CountryTextBox.Size = new System.Drawing.Size(122, 23);
@@ -379,7 +278,7 @@ namespace StudentsAndTeachers
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(344, 329);
+            this.CityTextBox.Location = new System.Drawing.Point(152, 319);
             this.CityTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(122, 23);
@@ -387,24 +286,24 @@ namespace StudentsAndTeachers
             // 
             // StreetTextBox
             // 
-            this.StreetTextBox.Location = new System.Drawing.Point(119, 398);
+            this.StreetTextBox.Location = new System.Drawing.Point(288, 319);
             this.StreetTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.StreetTextBox.Name = "StreetTextBox";
-            this.StreetTextBox.Size = new System.Drawing.Size(122, 23);
+            this.StreetTextBox.Size = new System.Drawing.Size(120, 23);
             this.StreetTextBox.TabIndex = 23;
             // 
             // HouseTextBox
             // 
-            this.HouseTextBox.Location = new System.Drawing.Point(299, 398);
+            this.HouseTextBox.Location = new System.Drawing.Point(421, 318);
             this.HouseTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.HouseTextBox.Name = "HouseTextBox";
-            this.HouseTextBox.Size = new System.Drawing.Size(102, 23);
+            this.HouseTextBox.Size = new System.Drawing.Size(62, 23);
             this.HouseTextBox.TabIndex = 24;
             // 
             // HouseLabel
             // 
             this.HouseLabel.AutoSize = true;
-            this.HouseLabel.Location = new System.Drawing.Point(341, 380);
+            this.HouseLabel.Location = new System.Drawing.Point(432, 301);
             this.HouseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HouseLabel.Name = "HouseLabel";
             this.HouseLabel.Size = new System.Drawing.Size(41, 15);
@@ -414,7 +313,7 @@ namespace StudentsAndTeachers
             // StreetLabel
             // 
             this.StreetLabel.AutoSize = true;
-            this.StreetLabel.Location = new System.Drawing.Point(167, 380);
+            this.StreetLabel.Location = new System.Drawing.Point(336, 301);
             this.StreetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StreetLabel.Name = "StreetLabel";
             this.StreetLabel.Size = new System.Drawing.Size(37, 15);
@@ -424,7 +323,7 @@ namespace StudentsAndTeachers
             // NationLabel
             // 
             this.NationLabel.AutoSize = true;
-            this.NationLabel.Location = new System.Drawing.Point(94, 310);
+            this.NationLabel.Location = new System.Drawing.Point(375, 243);
             this.NationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NationLabel.Name = "NationLabel";
             this.NationLabel.Size = new System.Drawing.Size(43, 15);
@@ -434,7 +333,7 @@ namespace StudentsAndTeachers
             // CountryLabel
             // 
             this.CountryLabel.AutoSize = true;
-            this.CountryLabel.Location = new System.Drawing.Point(257, 310);
+            this.CountryLabel.Location = new System.Drawing.Point(56, 300);
             this.CountryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CountryLabel.Name = "CountryLabel";
             this.CountryLabel.Size = new System.Drawing.Size(50, 15);
@@ -444,7 +343,7 @@ namespace StudentsAndTeachers
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
-            this.CityLabel.Location = new System.Drawing.Point(383, 310);
+            this.CityLabel.Location = new System.Drawing.Point(200, 300);
             this.CityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(28, 15);
@@ -454,7 +353,7 @@ namespace StudentsAndTeachers
             // PreviewButton
             // 
             this.PreviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PreviewButton.Location = new System.Drawing.Point(4, 618);
+            this.PreviewButton.Location = new System.Drawing.Point(10, 431);
             this.PreviewButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.PreviewButton.Name = "PreviewButton";
             this.PreviewButton.Size = new System.Drawing.Size(190, 44);
@@ -466,7 +365,7 @@ namespace StudentsAndTeachers
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveButton.Location = new System.Drawing.Point(376, 618);
+            this.SaveButton.Location = new System.Drawing.Point(349, 431);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(136, 44);
@@ -515,16 +414,16 @@ namespace StudentsAndTeachers
             this.MenuPanel.Controls.Add(this.HabbitsLabel);
             this.MenuPanel.Controls.Add(this.GenderMaleRadioButton);
             this.MenuPanel.Controls.Add(this.GenderFemaleRadioButton);
-            this.MenuPanel.Location = new System.Drawing.Point(14, 57);
+            this.MenuPanel.Location = new System.Drawing.Point(2, 57);
             this.MenuPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(525, 666);
+            this.MenuPanel.Size = new System.Drawing.Size(489, 482);
             this.MenuPanel.TabIndex = 33;
             // 
             // CourseWorkLAble
             // 
             this.CourseWorkLAble.AutoSize = true;
-            this.CourseWorkLAble.Location = new System.Drawing.Point(388, 465);
+            this.CourseWorkLAble.Location = new System.Drawing.Point(380, 362);
             this.CourseWorkLAble.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CourseWorkLAble.Name = "CourseWorkLAble";
             this.CourseWorkLAble.Size = new System.Drawing.Size(75, 15);
@@ -534,7 +433,7 @@ namespace StudentsAndTeachers
             // Numofseatslabel
             // 
             this.Numofseatslabel.AutoSize = true;
-            this.Numofseatslabel.Location = new System.Drawing.Point(272, 465);
+            this.Numofseatslabel.Location = new System.Drawing.Point(251, 362);
             this.Numofseatslabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Numofseatslabel.Name = "Numofseatslabel";
             this.Numofseatslabel.Size = new System.Drawing.Size(94, 15);
@@ -544,17 +443,16 @@ namespace StudentsAndTeachers
             // MoneyDepartmentlabel
             // 
             this.MoneyDepartmentlabel.AutoSize = true;
-            this.MoneyDepartmentlabel.Location = new System.Drawing.Point(193, 467);
+            this.MoneyDepartmentlabel.Location = new System.Drawing.Point(173, 364);
             this.MoneyDepartmentlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MoneyDepartmentlabel.Name = "MoneyDepartmentlabel";
-            this.MoneyDepartmentlabel.Size = new System.Drawing.Size(13, 15);
+            this.MoneyDepartmentlabel.Size = new System.Drawing.Size(0, 15);
             this.MoneyDepartmentlabel.TabIndex = 38;
-            this.MoneyDepartmentlabel.Text = "1";
             // 
             // CourseWorkcomboBox
             // 
             this.CourseWorkcomboBox.FormattingEnabled = true;
-            this.CourseWorkcomboBox.Location = new System.Drawing.Point(344, 485);
+            this.CourseWorkcomboBox.Location = new System.Drawing.Point(336, 382);
             this.CourseWorkcomboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CourseWorkcomboBox.Name = "CourseWorkcomboBox";
             this.CourseWorkcomboBox.Size = new System.Drawing.Size(149, 23);
@@ -562,7 +460,7 @@ namespace StudentsAndTeachers
             // 
             // NumofseatstextBox
             // 
-            this.NumofseatstextBox.Location = new System.Drawing.Point(288, 485);
+            this.NumofseatstextBox.Location = new System.Drawing.Point(267, 382);
             this.NumofseatstextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NumofseatstextBox.Name = "NumofseatstextBox";
             this.NumofseatstextBox.Size = new System.Drawing.Size(45, 23);
@@ -570,7 +468,7 @@ namespace StudentsAndTeachers
             // 
             // MoneyDepartmenttextBox
             // 
-            this.MoneyDepartmenttextBox.Location = new System.Drawing.Point(160, 485);
+            this.MoneyDepartmenttextBox.Location = new System.Drawing.Point(140, 382);
             this.MoneyDepartmenttextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MoneyDepartmenttextBox.Name = "MoneyDepartmenttextBox";
             this.MoneyDepartmenttextBox.Size = new System.Drawing.Size(114, 23);
@@ -579,16 +477,15 @@ namespace StudentsAndTeachers
             // SalaryGroupLabel
             // 
             this.SalaryGroupLabel.AutoSize = true;
-            this.SalaryGroupLabel.Location = new System.Drawing.Point(55, 466);
+            this.SalaryGroupLabel.Location = new System.Drawing.Point(55, 363);
             this.SalaryGroupLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SalaryGroupLabel.Name = "SalaryGroupLabel";
-            this.SalaryGroupLabel.Size = new System.Drawing.Size(13, 15);
+            this.SalaryGroupLabel.Size = new System.Drawing.Size(0, 15);
             this.SalaryGroupLabel.TabIndex = 34;
-            this.SalaryGroupLabel.Text = "1";
             // 
             // GroupSalaryTextBox
             // 
-            this.GroupSalaryTextBox.Location = new System.Drawing.Point(10, 485);
+            this.GroupSalaryTextBox.Location = new System.Drawing.Point(10, 382);
             this.GroupSalaryTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GroupSalaryTextBox.Name = "GroupSalaryTextBox";
             this.GroupSalaryTextBox.Size = new System.Drawing.Size(122, 23);
@@ -597,26 +494,28 @@ namespace StudentsAndTeachers
             // PersonRegestrationRadioButton
             // 
             this.PersonRegestrationRadioButton.AutoSize = true;
-            this.PersonRegestrationRadioButton.Location = new System.Drawing.Point(50, 14);
+            this.PersonRegestrationRadioButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PersonRegestrationRadioButton.Location = new System.Drawing.Point(6, 12);
             this.PersonRegestrationRadioButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.PersonRegestrationRadioButton.Name = "PersonRegestrationRadioButton";
-            this.PersonRegestrationRadioButton.Size = new System.Drawing.Size(127, 19);
+            this.PersonRegestrationRadioButton.Size = new System.Drawing.Size(270, 41);
             this.PersonRegestrationRadioButton.TabIndex = 33;
             this.PersonRegestrationRadioButton.TabStop = true;
-            this.PersonRegestrationRadioButton.Text = "PersonRegestration";
+            this.PersonRegestrationRadioButton.Text = "Person Regestration";
             this.PersonRegestrationRadioButton.UseVisualStyleBackColor = true;
             this.PersonRegestrationRadioButton.CheckedChanged += new System.EventHandler(this.PersonRegestrationRadioButton_CheckedChanged);
             // 
             // StudentRegestrationRadioButton
             // 
             this.StudentRegestrationRadioButton.AutoSize = true;
-            this.StudentRegestrationRadioButton.Location = new System.Drawing.Point(241, 14);
+            this.StudentRegestrationRadioButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.StudentRegestrationRadioButton.Location = new System.Drawing.Point(303, 12);
             this.StudentRegestrationRadioButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.StudentRegestrationRadioButton.Name = "StudentRegestrationRadioButton";
-            this.StudentRegestrationRadioButton.Size = new System.Drawing.Size(132, 19);
+            this.StudentRegestrationRadioButton.Size = new System.Drawing.Size(282, 41);
             this.StudentRegestrationRadioButton.TabIndex = 34;
             this.StudentRegestrationRadioButton.TabStop = true;
-            this.StudentRegestrationRadioButton.Text = "StudentRegestration";
+            this.StudentRegestrationRadioButton.Text = "Student Regestration";
             this.StudentRegestrationRadioButton.UseVisualStyleBackColor = true;
             this.StudentRegestrationRadioButton.CheckedChanged += new System.EventHandler(this.StudentRegestrationRadioButton_CheckedChanged);
             // 
@@ -637,19 +536,20 @@ namespace StudentsAndTeachers
             this.PrevievPanel.Controls.Add(this.Human_student_teacher_Lable);
             this.PrevievPanel.Controls.Add(this.HSTSelectorComboBox1);
             this.PrevievPanel.Controls.Add(this.Previewlabel);
-            this.PrevievPanel.Location = new System.Drawing.Point(546, 57);
+            this.PrevievPanel.Location = new System.Drawing.Point(494, 58);
             this.PrevievPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.PrevievPanel.Name = "PrevievPanel";
-            this.PrevievPanel.Size = new System.Drawing.Size(405, 662);
+            this.PrevievPanel.Size = new System.Drawing.Size(405, 481);
             this.PrevievPanel.TabIndex = 36;
             // 
             // InfoLabel
             // 
             this.InfoLabel.AutoSize = true;
+            this.InfoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.InfoLabel.Location = new System.Drawing.Point(20, 130);
             this.InfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(0, 15);
+            this.InfoLabel.Size = new System.Drawing.Size(0, 21);
             this.InfoLabel.TabIndex = 36;
             // 
             // Human_student_teacher_Lable
@@ -670,17 +570,19 @@ namespace StudentsAndTeachers
             this.HSTSelectorComboBox1.Name = "HSTSelectorComboBox1";
             this.HSTSelectorComboBox1.Size = new System.Drawing.Size(397, 23);
             this.HSTSelectorComboBox1.TabIndex = 35;
+            this.HSTSelectorComboBox1.SelectedIndexChanged += new System.EventHandler(this.HSTSelectorComboBox1_SelectedIndexChanged);
             // 
             // TeacherRegestrationRadioButton
             // 
             this.TeacherRegestrationRadioButton.AutoSize = true;
-            this.TeacherRegestrationRadioButton.Location = new System.Drawing.Point(458, 14);
+            this.TeacherRegestrationRadioButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TeacherRegestrationRadioButton.Location = new System.Drawing.Point(619, 12);
             this.TeacherRegestrationRadioButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TeacherRegestrationRadioButton.Name = "TeacherRegestrationRadioButton";
-            this.TeacherRegestrationRadioButton.Size = new System.Drawing.Size(131, 19);
+            this.TeacherRegestrationRadioButton.Size = new System.Drawing.Size(280, 41);
             this.TeacherRegestrationRadioButton.TabIndex = 37;
             this.TeacherRegestrationRadioButton.TabStop = true;
-            this.TeacherRegestrationRadioButton.Text = "TeacherRegestration";
+            this.TeacherRegestrationRadioButton.Text = "Teacher Regestration";
             this.TeacherRegestrationRadioButton.UseVisualStyleBackColor = true;
             this.TeacherRegestrationRadioButton.CheckedChanged += new System.EventHandler(this.TeacherRegestrationRadioButton_CheckedChanged);
             // 
@@ -688,7 +590,7 @@ namespace StudentsAndTeachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 736);
+            this.ClientSize = new System.Drawing.Size(903, 544);
             this.Controls.Add(this.TeacherRegestrationRadioButton);
             this.Controls.Add(this.PrevievPanel);
             this.Controls.Add(this.StudentRegestrationRadioButton);

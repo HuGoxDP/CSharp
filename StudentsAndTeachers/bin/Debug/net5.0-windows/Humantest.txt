@@ -1,0 +1,15 @@
+Name: ghfgh
+Surname: gdfg
+Gender: Female
+Age: 14
+Height: 45
+Weight: 45
+Is Habbits: True
+Email: ljil
+Nation: French
+Adress: Country: ;l
+City: kl;
+Street: k;
+House: 1
+
+

@@ -1,0 +1,18 @@
+Name: sadf
+Surname: vcxdf
+Gender: Female
+Age: 6
+Height: 5466
+Weight: 45
+Is Habbits: True
+Email: sdfg
+Nation: French
+Adress: Country: sdfg
+City: sdfg
+Street: sdfg
+House: 5
+Group: 5
+Money: 4
+Key: python
+ 
+

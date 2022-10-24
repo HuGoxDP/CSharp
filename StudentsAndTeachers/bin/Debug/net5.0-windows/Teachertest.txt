@@ -1,0 +1,19 @@
+Name: dfsdf
+Surname: dsfsd
+Gender: Female
+Age: 5
+Height: 546354
+Weight: 564
+Is Habbits: True
+Email: xz
+Nation: Polish
+Adress: Country: xzczxc
+City: xcz
+Street: czxc
+House: 5
+Salary: 456
+Money: zZ
+Number of set: 4
+Key: java
+ 
+

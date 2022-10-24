@@ -1,0 +1,15 @@
+Name: sdasd
+Surname: das
+Gender: Female
+Age: 5
+Height: 456
+Weight: 32
+Is Habbits: True
+Email: sdfgs
+Nation: French
+Adress: Country: dsfg
+City: sdfg
+Street: sfdg
+House: 4
+
+

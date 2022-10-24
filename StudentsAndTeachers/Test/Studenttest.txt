@@ -1,0 +1,18 @@
+Name: gfsdgsd
+Surname: sdfg
+Gender: Male
+Age: 7
+Height: 465
+Weight: 5441
+Is Habbits: True
+Email: sdfgsdg
+Nation: Polish
+Adress: Country: 54s
+City: sfg
+Street: sdfg
+House: 4
+Group: 456
+Money: 5555555
+Key: java
+ 
+
