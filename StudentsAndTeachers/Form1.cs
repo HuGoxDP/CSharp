@@ -18,8 +18,9 @@ namespace StudentsAndTeachers
         public Menu()
         {
             InitializeComponent();
-            PersonRegestrationRadioButton.Checked = true;
             Panel_change();
+            PersonRegestrationRadioButton.Checked = true;
+            
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -86,6 +87,7 @@ namespace StudentsAndTeachers
             {
 
                 PersonRegistrationLabel.Text = "Person Registration";
+                Human_student_teacher_Lable.Text = "Selected Person";
                 Previewlabel.Text = "Preview Person";
                 GroupSalaryTextBox.Visible = false;
                 SalaryGroupLabel.Visible = false;
@@ -94,10 +96,58 @@ namespace StudentsAndTeachers
                 Numofseatslabel.Visible = false;
                 NumofseatstextBox.Visible = false;
                 CourseWorkLAble.Visible = false;
+                CourseWorkcomboBox.Visible = false;
 
+            }
+            else if (StudentradioButton.Checked)
+            {
+                PersonRegistrationLabel.Text = "Studen Registration";
+                Human_student_teacher_Lable.Text = "Selected Studen";
+                Previewlabel.Text = "Preview Studen";
+                GroupSalaryTextBox.Visible = true;
+                SalaryGroupLabel.Visible = true;
+                SalaryGroupLabel.Text = "Group";
+                MoneyDepartmentlabel.Visible = true;
+                MoneyDepartmentlabel.Text = "Money";
+                MoneyDepartmenttextBox.Visible = true;
+                Numofseatslabel.Visible = false;
+                NumofseatstextBox.Visible = false;
+                CourseWorkLAble.Visible = true;
+                CourseWorkcomboBox.Visible = true;
+            }
+            else if (TeacherradioButton.Checked)
+            {
+                PersonRegistrationLabel.Text = "Teacher Registration";
+                Human_student_teacher_Lable.Text = "Selected Teacher";
+                Previewlabel.Text = "Preview Teacher";
+                GroupSalaryTextBox.Visible = true;
+                SalaryGroupLabel.Visible = true;
+                SalaryGroupLabel.Text = "Salary";
+                MoneyDepartmentlabel.Text = "Department";
+                MoneyDepartmentlabel.Visible = true;
+                MoneyDepartmenttextBox.Visible = true;
+                Numofseatslabel.Visible = true;
+                NumofseatstextBox.Visible = true;
+                CourseWorkLAble.Visible = true;
+                CourseWorkcomboBox.Visible = true;
             }
 
 
+        }
+
+        private void PersonRegestrationRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel_change();
+        }
+
+        private void StudentRegestrationRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel_change();
+        }
+
+        private void TeacherRegestrationRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel_change();
         }
     }
 }

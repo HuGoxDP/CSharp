@@ -49,7 +49,12 @@ namespace StudentsAndTeachers
             sw.WriteLine(T_Txt());
             sw.Close();
         }
-       
-        
+        public int Counts()
+        {
+            int counts1 = List.Count;
+            return counts1;
+        }
+
+
     }
 }
