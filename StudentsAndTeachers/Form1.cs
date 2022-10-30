@@ -12,7 +12,6 @@ namespace StudentsAndTeachers
 {
     public partial class Menu : Form
     {
-
         private ListHuman listHuman = new ListHuman();
         private ListStudent listStudent = new ListStudent();
         private ListTeacher listTeacher = new ListTeacher();

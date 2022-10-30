@@ -1,15 +1,29 @@
-Name: ghfgh
-Surname: gdfg
-Gender: Female
-Age: 14
+Name: gh
+Surname: ghj
+Gender: Male
+Age: 3
 Height: 45
-Weight: 45
+Weight: 54
 Is Habbits: True
-Email: ljil
+Email: bv
+Nation: Ukranian
+Adress: Country: vb
+City: bcv
+Street: bc
+House: 5
+
+Name: Sasha
+Surname: Kit
+Gender: Male
+Age: 84
+Height: 80
+Weight: 180
+Is Habbits: True
+Email: ghdfgdfgdfg
 Nation: French
-Adress: Country: ;l
-City: kl;
-Street: k;
-House: 1
+Adress: Country: bcvcb
+City: vcbvb
+Street: vcb
+House: 5
 
 
