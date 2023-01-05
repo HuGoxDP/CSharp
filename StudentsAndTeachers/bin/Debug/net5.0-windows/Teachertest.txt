@@ -1,19 +1,19 @@
-Name: dfsdf
-Surname: dsfsd
-Gender: Female
-Age: 5
-Height: 546354
-Weight: 564
+Name: 121
+Surname: 212
+Gender: Male
+Age: 53
+Height: 21
+Weight: 21
 Is Habbits: True
-Email: xz
-Nation: Polish
-Adress: Country: xzczxc
-City: xcz
-Street: czxc
-House: 5
-Salary: 456
-Money: zZ
-Number of set: 4
-Key: java
+Email: 21
+Nation: French
+Adress: Country: 12
+City: 21212
+Street: 212
+House: 121
+Salary: 2112
+Money: 1212
+Number of set: 313
+Key: python
  
 

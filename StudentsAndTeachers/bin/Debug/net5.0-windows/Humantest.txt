@@ -1,29 +1,29 @@
-Name: gh
-Surname: ghj
+Name: bcb
+Surname: cfg
 Gender: Male
-Age: 3
-Height: 45
-Weight: 54
+Age: 24
+Height: 44
+Weight: 44
 Is Habbits: True
-Email: bv
+Email: 4
 Nation: Ukranian
-Adress: Country: vb
-City: bcv
-Street: bc
-House: 5
+Adress: Country: 4
+City: 44
+Street: 44
+House: 44
 
-Name: Sasha
-Surname: Kit
+Name: rhdg
+Surname: fdtrf
 Gender: Male
-Age: 84
-Height: 80
-Weight: 180
+Age: 25
+Height: 56546
+Weight: 6456
 Is Habbits: True
-Email: ghdfgdfgdfg
+Email: 546456
 Nation: French
-Adress: Country: bcvcb
-City: vcbvb
-Street: vcb
-House: 5
+Adress: Country: 456
+City: 546
+Street: 546
+House: 546
 
 

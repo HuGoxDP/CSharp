@@ -1,18 +1,18 @@
-Name: sadf
-Surname: vcxdf
-Gender: Female
-Age: 6
-Height: 5466
-Weight: 45
+Name: hdfgdf
+Surname: fdgdf
+Gender: Male
+Age: 24
+Height: 232
+Weight: 123
 Is Habbits: True
-Email: sdfg
-Nation: French
-Adress: Country: sdfg
-City: sdfg
-Street: sdfg
-House: 5
-Group: 5
-Money: 4
-Key: python
+Email: 123
+Nation: Polish
+Adress: Country: 1322
+City: 323
+Street: 23
+House: 23
+Group: 2313
+Money: 321
+Key: java
  
 

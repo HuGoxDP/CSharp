@@ -7,21 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace StudentsAndTeachers
 {
     public partial class Menu : Form
     {
+        Dictionary<int, Human> Humandict = new Dictionary<int, Human>();
+        Dictionary<int, Student> Studentdict = new Dictionary<int, Student>();
+        Dictionary<int, Teacher> Teacherdict = new Dictionary<int, Teacher>();
+        Dictionary<int, Teacher> CourseWorkdict = new Dictionary<int, Teacher>();
+        private int CourseWorkn = 0;
         private ListHuman listHuman = new ListHuman();
         private ListStudent listStudent = new ListStudent();
         private ListTeacher listTeacher = new ListTeacher();
-        private Human[] human = new Human[1];
-        private Student[] students = new Student[1];
-        private Teacher[] teacher = new Teacher[1];
+        private DataTable DataTemp = new DataTable();
+        private DataTable DataTemph = new DataTable();
+
 
         public Menu()
         {
-            
+
             InitializeComponent();
             Startsetings();
 
@@ -33,29 +39,35 @@ namespace StudentsAndTeachers
             RadioButton TeacherradioButton = (RadioButton)TeacherRegestrationRadioButton;
             RadioButton StudentradioButton = (RadioButton)StudentRegestrationRadioButton;
 
-            if (PersonradioButton.Checked) { 
-            int counthumans = listHuman.Counts();
-            this.human = new Human[counthumans+1];
-            human[counthumans] = new Human(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)));
-            listHuman.Add(human[counthumans]);
-            listHuman.TextsWriter("Humantest.txt");
+            if (PersonradioButton.Checked) {
+                int counthumans = listHuman.Counts();
+                Human human = new Human(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)));
+                Humandict.Add(counthumans, human);
+                listHuman.Add(Humandict[counthumans]);
+                listHuman.TextsWriter("Humantest.txt");
             }
             if (TeacherradioButton.Checked)
             {
                 int countteachet = listTeacher.Counts();
-                this.teacher = new Teacher[countteachet + 1];
-                teacher[countteachet] = new Teacher(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)), int.Parse(GroupSalaryTextBox.Text),MoneyDepartmenttextBox.Text, int.Parse(NumofseatstextBox.Text),(KeyWords)CourseWorkSelect());
-                listTeacher.Add(teacher[countteachet]);
+                Teacher teacher = new Teacher(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)), int.Parse(GroupSalaryTextBox.Text), MoneyDepartmenttextBox.Text, int.Parse(NumofseatstextBox.Text), (KeyWords)CourseWorkSelect());
+                Teacherdict.Add(countteachet, teacher);
+                listTeacher.Add(Teacherdict[countteachet]);
                 listTeacher.TextsWriter("Teachertest.txt");
             }
             if (StudentradioButton.Checked)
             {
                 int countstudent = listStudent.Counts();
-                this.students = new Student[countstudent + 1];
-                students[countstudent] = new Student(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)), int.Parse(GroupSalaryTextBox.Text), int.Parse(MoneyDepartmenttextBox.Text),(Key)CourseWorkSelect());
-                listStudent.Add(students[countstudent]);
+                Student students = new Student(NameTextBox.Text, SurnameTextBox.Text, SelectedGender(), AgeComboBox.SelectedIndex, Convert.ToDouble(HeightTextBox.Text), Convert.ToDouble(WeightTextBox.Text), HabbitsCheckBox.Checked, EmailTextBox.Text, Nation_Convector(), new Adress(CountryTextBox.Text, CityTextBox.Text, StreetTextBox.Text, int.Parse(HouseTextBox.Text)), int.Parse(GroupSalaryTextBox.Text), int.Parse(MoneyDepartmenttextBox.Text), (Key)CourseWorkSelect());
+                Studentdict.Add(countstudent, students);
+                listStudent.Add(Studentdict[countstudent]);
                 listStudent.TextsWriter("Studenttest.txt");
             }
+            ChooseStudent();
+            CourseWork_Choose();
+            Teacherselect();
+            Treeviews();
+
+
             clearAll();
             PreviewButton.Visible = true;
         }
@@ -82,7 +94,7 @@ namespace StudentsAndTeachers
 
 
         }
-       private void Startsetings()
+        private void Startsetings()
         {
             for (int i = 100; i > 0; i--)
             {
@@ -91,7 +103,8 @@ namespace StudentsAndTeachers
                 });
             }
             PreviewButton.Visible = false;
-            Panel_change();
+            gridviewcreateH();
+            gridviewcreateStT();
             PersonRegestrationRadioButton.Checked = true;
         }
         private Nation Nation_Convector()
@@ -140,6 +153,8 @@ namespace StudentsAndTeachers
             return 0;
 
         }
+        
+
 
         private void PreviewButton_Click(object sender, EventArgs e)
         {
@@ -155,33 +170,33 @@ namespace StudentsAndTeachers
             InfoLabel.Text = " ";
             if (PersonradioButton.Checked)
             {
-
+                gridviewcreateH();
                 for (int i = 0; i < counthumans; i++)
                 {
                     HSTSelectorComboBox1.Items.AddRange(new object[]{
-                         human[i].Name + " " + human[i].Surname
-                }); 
+                     Humandict[i].Name  + " " + Humandict[i].Surname
+                });
                 }
                 listHuman.Show();
             }
             if (TeacherradioButton.Checked)
             {
-                
+                DataRowsGridviewT();
                 for (int j = 0; j < countteachet; j++)
                 {
                     HSTSelectorComboBox1.Items.AddRange(new object[]{
-                        teacher[j].Name +" " + teacher[j].Surname
+                        Teacherdict[j].Name +" " + Teacherdict[j].Surname
                 });
                 }
                 listTeacher.Show();
             }
             if (StudentradioButton.Checked)
             {
-                
+                DataRowsGridviewst();
                 for (int k = 0; k < countstudent; k++)
                 {
                     HSTSelectorComboBox1.Items.AddRange(new object[]{
-                        students[k].Name +" " + students[k].Surname
+                        Studentdict[k].Name +" " + Studentdict[k].Surname
                 });
                 }
                 listStudent.Show();
@@ -210,9 +225,14 @@ namespace StudentsAndTeachers
                 CourseWorkLAble.Visible = false;
                 CourseWorkcomboBox.Visible = false;
 
+                dataGridView2.Visible = true;
+                dataGridView1.Visible = false;
+                DataRowsGridviewh();
+
             }
             if (StudentradioButton.Checked)
             {
+
                 PersonRegistrationLabel.Text = "Studen Registration";
                 Human_student_teacher_Lable.Text = "Selected Studen";
                 Previewlabel.Text = "Preview Studen";
@@ -233,6 +253,10 @@ namespace StudentsAndTeachers
                     "java",
                     "JS"
                 });
+
+                dataGridView2.Visible = false;
+                dataGridView1.Visible = true;
+                DataRowsGridviewst();
             }
             if (TeacherradioButton.Checked)
             {
@@ -256,6 +280,10 @@ namespace StudentsAndTeachers
                     "java",
                     "JS"
                 });
+                dataGridView2.Visible = false;
+                dataGridView1.Visible = true;
+
+                DataRowsGridviewT();
             }
             clearAll();
             HSTSelectorComboBox1.Items.Clear();
@@ -263,7 +291,49 @@ namespace StudentsAndTeachers
             InfoLabel.Text = " ";
             HSTSelectorComboBox1.Text = "";
         }
+        private void gridviewcreateH()
+        {
 
+            DataTemph.Columns.Add("Name");
+            DataTemph.Columns.Add("Surname");
+
+            this.dataGridView2.DataSource = DataTemph;
+        }
+        private void gridviewcreateStT()
+        {
+
+                DataTemp.Columns.Add("Name");
+                DataTemp.Columns.Add("Surname");
+           
+                DataTemp.Columns.Add("Key Words");
+
+
+            this.dataGridView1.DataSource = DataTemp;
+        }
+        private void DataRowsGridviewT()
+        {
+            DataTemp.Rows.Clear();
+            for (int i = 0; i < Teacherdict.Count; i++)
+            {
+                DataTemp.Rows.Add(Teacherdict[i].Name, Teacherdict[i].Surname, Teacherdict[i].KeyWords);
+            }
+        }
+        private void DataRowsGridviewst()
+        {
+            DataTemp.Rows.Clear();
+            for (int i = 0; i < Studentdict.Count; i++)
+            {
+                DataTemp.Rows.Add(Studentdict[i].Name, Studentdict[i].Surname, Studentdict[i].Key);
+            }
+        }
+        private void DataRowsGridviewh()
+        {
+            DataTemph.Rows.Clear();
+            for (int i = 0; i < Humandict.Count; i++)
+            {
+                DataTemph.Rows.Add(Humandict[i].Name, Humandict[i].Surname);
+            }
+        }
         private void PersonRegestrationRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             Panel_change();
@@ -293,19 +363,19 @@ namespace StudentsAndTeachers
                 else
                 {
                     InfoLabel.Text =
-                    "Name " + human[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
-                    "Surname " + human[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
-                    "Gender " + human[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
-                    "Age " + human[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
-                    "Height " + human[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
-                    "Weight " + human[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
-                    "Habbits " + human[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
-                    "Email " + human[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
-                    "Nation " + human[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
-                    "Country " + human[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
-                    "City " + human[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
-                    "Street " + human[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
-                    "House " + human[HSTSelectorComboBox1.SelectedIndex].Adress.House;
+                    "Name " + Humandict[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
+                    "Surname " + Humandict[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
+                    "Gender " + Humandict[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
+                    "Age " + Humandict[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
+                    "Height " + Humandict[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
+                    "Weight " + Humandict[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
+                    "Habbits " + Humandict[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
+                    "Email " + Humandict[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
+                    "Nation " + Humandict[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
+                    "Country " + Humandict[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
+                    "City " + Humandict[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
+                    "Street " + Humandict[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
+                    "House " + Humandict[HSTSelectorComboBox1.SelectedIndex].Adress.House;
                 }
             }
             if (TeacherradioButton.Checked)
@@ -317,23 +387,23 @@ namespace StudentsAndTeachers
                 else
                 {
                     InfoLabel.Text =
-                "Name " + teacher[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
-                "Surname " + teacher[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
-                "Gender " + teacher[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
-                "Age " + teacher[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
-                "Height " + teacher[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
-                "Weight " + teacher[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
-                "Habbits " + teacher[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
-                "Email " + teacher[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
-                "Nation " + teacher[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
-                "Country " + teacher[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
-                "City " + teacher[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
-                "Street " + teacher[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
-                "House " + teacher[HSTSelectorComboBox1.SelectedIndex].Adress.House + "\n" +
-                "Salary " + teacher[HSTSelectorComboBox1.SelectedIndex].Salary + "\n" +
-                "Department " + teacher[HSTSelectorComboBox1.SelectedIndex].Department + "\n" +
-                "Num of seats " + teacher[HSTSelectorComboBox1.SelectedIndex].NumOfSeats + "\n" +
-                "Cours Work Theme " + teacher[HSTSelectorComboBox1.SelectedIndex].KeyWords + "\n";
+                "Name " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
+                "Surname " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
+                "Gender " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
+                "Age " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
+                "Height " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
+                "Weight " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
+                "Habbits " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
+                "Email " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
+                "Nation " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
+                "Country " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
+                "City " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
+                "Street " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
+                "House " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Adress.House + "\n" +
+                "Salary " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Salary + "\n" +
+                "Department " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].Department + "\n" +
+                "Num of seats " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].NumOfSeats + "\n" +
+                "Cours Work Theme " + Teacherdict[HSTSelectorComboBox1.SelectedIndex].KeyWords + "\n";
                 }
             }
             if (StudentradioButton.Checked)
@@ -345,25 +415,103 @@ namespace StudentsAndTeachers
                 else
                 {
                     InfoLabel.Text =
-                "Name " + students[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
-                "Surname " + students[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
-                "Gender " + students[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
-                "Age " + students[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
-                "Height " + students[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
-                "Weight " + students[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
-                "Habbits " + students[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
-                "Email " + students[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
-                "Nation " + students[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
-                "Country " + students[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
-                "City " + students[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
-                "Street " + students[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
-                "House " + students[HSTSelectorComboBox1.SelectedIndex].Adress.House +
-                 "Group  " + students[HSTSelectorComboBox1.SelectedIndex].Group + "\n" +
-                "Money  " + students[HSTSelectorComboBox1.SelectedIndex].Money + "\n" +
-                "Cours Work " + students[HSTSelectorComboBox1.SelectedIndex].Key + "\n";
+                "Name " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Name + "\n" +
+                "Surname " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Surname + "\n" +
+                "Gender " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Gender + "\n" +
+                "Age " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Age + "\n" +
+                "Height " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Height + "\n" +
+                "Weight " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Weight + "\n" +
+                "Habbits " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Habbits + "\n" +
+                "Email " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Email + "\n" +
+                "Nation " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Nation + "\n" +
+                "Country " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Adress.Country + "\n" +
+                "City " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Adress.City + "\n" +
+                "Street " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Adress.Street + "\n" +
+                "House " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Adress.House +
+                 "Group  " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Group + "\n" +
+                "Money  " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Money + "\n" +
+                "Cours Work " + Studentdict[HSTSelectorComboBox1.SelectedIndex].Key + "\n";
                 }
             }
             
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void ChooseStudent()
+        {
+            StudentChoose.Items.Clear();
+            for (int i = 0; i < Studentdict.Count; i++)
+            {
+                StudentChoose.Items.AddRange(new object[]{
+                     Studentdict[i].Name  + " " + Studentdict[i].Surname
+                });
+            }
+        }
+        private void Teacherselect()
+        {
+            TeacherSelect.Items.Clear();
+            for (int i = 0; i < Teacherdict.Count; i++)
+            {
+                TeacherSelect.Items.AddRange(new object[]{
+                     Teacherdict[i].Name  + " " + Teacherdict[i].Surname
+                });
+            }
+        }
+        private void CourseWork_Choose()
+        {
+
+            CourseWorkChoose.Items.Clear();
+            for (int i = 0; i < CourseWorkdict.Count; i++)
+            {
+                CourseWorkChoose.Items.AddRange(new object[]{
+                     CourseWorkdict[i].CourseWorks.Name  + " \n " + CourseWorkdict[i].CourseWorks.Date + " \n" + CourseWorkdict[i].CourseWorks.Description
+                });
+            }
+        }
+        private void Treeviews()
+        {
+            this.treeView1.Nodes.Clear();
+            for (int i = 0; i < Teacherdict.Count(); i++)
+            {
+                treeView1.Nodes.Add(Teacherdict[i].Name + " " + Teacherdict[i].Surname);
+                for (int j = 0; j < Teacherdict[i].List.Count; j++)
+                {
+                    treeView1.Nodes[i].Nodes.Add(Teacherdict[i].List[j].Name);
+                    treeView1.Nodes[i].Nodes[j].Nodes.Add(Teacherdict[i].CourseWorks.Name);
+                }
+            }
+        }
+        private void EnrollinCourseWork_Click(object sender, EventArgs e)
+        {
+            CourseWorkdict[CourseWorkChoose.SelectedIndex].List.Add(Studentdict[StudentChoose.SelectedIndex]);
+            ChooseStudent();
+            CourseWork_Choose();
+            Teacherselect();
+            Treeviews();
+        }
+
+        private void CreateCourseWork_Click(object sender, EventArgs e)
+        {
+            
+            Teacherdict[TeacherSelect.SelectedIndex].CourseWorks = new CourseWork(CourseworkDescriptionBox2.Text, CourseworkNametextBox.Text, dateTimePicker1.Value);
+            CourseWorkdict.Add(CourseWorkn, Teacherdict[TeacherSelect.SelectedIndex]);
+            ChooseStudent();
+            CourseWork_Choose();
+            Teacherselect();
+            Treeviews();
+            CourseWorkn++;
+
+        }
+
+        private void CourseWorkChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CourseWorkInfo.Text =
+               "Name " + CourseWorkdict[CourseWorkChoose.SelectedIndex].CourseWorks.Name + "\n" +
+               "Data  " + CourseWorkdict[CourseWorkChoose.SelectedIndex].CourseWorks.Date + "\n" +
+               "Description " + CourseWorkdict[CourseWorkChoose.SelectedIndex].CourseWorks.Description + "\n";
         }
     }
 }

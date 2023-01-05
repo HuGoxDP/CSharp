@@ -15,7 +15,13 @@ namespace StudentsAndTeachers
         {
             listHumans = new List<Human>();
         }
-        public void Add(Human human)
+
+        public List<Human> ListHumans
+        {
+            get { return listHumans; }
+        }
+    
+    public void Add(Human human)
         {
             listHumans.Add(human);
         }

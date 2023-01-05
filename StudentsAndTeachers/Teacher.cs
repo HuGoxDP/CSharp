@@ -18,6 +18,7 @@ namespace StudentsAndTeachers
 		private string department;
 		private int numofseats;
 		private KeyWords keywords;
+		private CourseWork _coursework;
 		public Teacher() : base()
 		{
 			List = new List<Student>();
@@ -97,6 +98,11 @@ namespace StudentsAndTeachers
 			set { keywords = value; }
 		}
 		public List<Student> List { get; set; }
+		public CourseWork CourseWorks
+		{
+			get { return _coursework; }
+			set { _coursework = value; }
+		}
 	}
 }
 
